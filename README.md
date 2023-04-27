@@ -16,3 +16,19 @@ input.replace(/\W/g, '')
 ```js
 input.replace(/[^0-9a-z]/gi, '')
 ```
+
+### TypeScript, removing everything, inlcuding digits:
+
+```ts
+function removeSpacesAndNonAlphabeticCharacters(input: string): string {
+  let result = "";
+  for (let i = 0; i < input.length; i++) {
+    const char = input.charAt(i);
+    if (/[a-zA-Z]/.test(char)) {
+      result += char;
+    }
+  }
+  return result.replace(/[\s,.;:\/\\|+!=@#$%^&*()'"<>?`~]/g, "");
+}
+
+```
