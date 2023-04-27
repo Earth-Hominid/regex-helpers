@@ -7,3 +7,7 @@ function removeSpacesAndNonAlphabeticCharacters(input: string): string {
 }
 
 ```
+
+```js
+string.replace(/[^A-Za-z0-9]/g, '');
+```
